@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bus Ticket Booking</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner" data-bs-interval="5000">
+        <div class="carousel-item active">
+          <img
+            src="https://microsites-websitebuilder.s3.amazonaws.com/images/mahendrabus.in-slider1-0-1570611518.jpg"
+            data-src=""
+            alt="bus image"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://microsites-websitebuilder.s3.amazonaws.com/images/mahendrabus.in-slider1-3-1570611518.jpg"
+            data-src=""
+            alt="bus image"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://microsites-websitebuilder.s3.amazonaws.com/images/mahendrabus.in-slider1-4-1570611518.jpg"
+            data-src=""
+            alt="bus image"
+          />
+        </div>
+      </div>
+    </div>
+    <div style="margin-left: 10%; margin-right: 10%; margin-top: -5%">
+      <div class="alert alert-primary" role="alert">
+        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="home-tab-pane"
+              aria-selected="true"
+            >
+              Bus Booking
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="profile-tab-pane"
+              aria-selected="false"
+            >
+              Link Ticket
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#contact-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="contact-tab-pane"
+              aria-selected="false"
+            >
+              Bus Hire
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content device-width" id="myTabContent">
+          <div
+            class="tab-pane fade show active nav-fill"
+            id="home-tab-pane"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+            tabindex="0"
+          >
+            <ul
+              class="list-unstyled list-group list-group-horizontal"
+              style="margin-top: 2%; margin-bottom: 2%"
+            >
+              <li style="width: 100%">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  style="height: 140%"
+                >
+                  <option selected>From</option>
+                  <option value="1">Mumbai</option>
+                  <option value="2">Pune</option>
+                  <option value="3">Nashik</option>
+                  <option value="4">Nagpur</option>
+                  <option value="5">Thane</option>
+                  <option value="6">Sindhudurg</option>
+                  <option value="7">Satara</option>
+                  <option value="8">Ahmednagar</option>
+                </select>
+              </li>
+              <li style="width: 100%">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  style="height: 140%"
+                >
+                  <option selected>To</option>
+                  <option selected>From</option>
+                  <option value="1">Mumbai</option>
+                  <option value="2">Pune</option>
+                  <option value="3">Nashik</option>
+                  <option value="4">Nagpur</option>
+                  <option value="5">Thane</option>
+                  <option value="6">Sindhudurg</option>
+                  <option value="7">Satara</option>
+                  <option value="8">Ahmednagar</option>
+                </select>
+              </li>
+              <li style="width: 100%">
+                <input
+                  type="date"
+                  name="party"
+                  <!--
+                  min="2017-04-01"
+                  max="2017-04-20"
+                  --
+                />
+                style=" height: 140%; width: 100%; border: none; font-size:
+                large; text-align: center; " required />
+              </li>
+              <li style="width: 100%">
+                <input
+                  type="date"
+                  name="party"
+                  min="2017-04-01"
+                  max="2017-04-20"
+                  style="
+                    height: 140%;
+                    width: 100%;
+                    border: none;
+                    font-size: large;
+                    text-align: center;
+                  "
+                  required
+                />
+                <span class="validity"></span>
+              </li>
+              <li>
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="profile-tab-pane"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+            tabindex="0"
+          >
+            <ul
+              class="list-unstyled list-group list-group-horizontal"
+              style="margin-top: 2%; margin-bottom: 2%"
+            >
+              <li style="width: 100%">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  style="height: 140%"
+                >
+                  <option selected>Source</option>
+                  <option selected>From</option>
+                  <option value="1">Mumbai</option>
+                  <option value="2">Pune</option>
+                  <option value="3">Nashik</option>
+                  <option value="4">Nagpur</option>
+                  <option value="5">Thane</option>
+                  <option value="6">Sindhudurg</option>
+                  <option value="7">Satara</option>
+                  <option value="8">Ahmednagar</option>
+                </select>
+              </li>
+              <li style="width: 100%">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  style="height: 140%"
+                >
+                  <option selected>Destination</option>
+                  <option selected>From</option>
+                  <option value="1">Mumbai</option>
+                  <option value="2">Pune</option>
+                  <option value="3">Nashik</option>
+                  <option value="4">Nagpur</option>
+                  <option value="5">Thane</option>
+                  <option value="6">Sindhudurg</option>
+                  <option value="7">Satara</option>
+                  <option value="8">Ahmednagar</option>
+                </select>
+              </li>
+              <li style="width: 100%">
+                <input
+                  type="date"
+                  name="party"
+                  min="2017-04-01"
+                  max="2017-04-20"
+                  style="
+                    height: 140%;
+                    width: 100%;
+                    border: none;
+                    font-size: large;
+                    text-align: center;
+                  "
+                  required
+                />
+              </li>
+              <li>
+                <div>
+                  <button class="btn btn-outline-success" type="submit">
+                    Search
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="contact-tab-pane"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+            tabindex="0"
+          >
+            <ul
+              class="list-unstyled list-group list-group-horizontal"
+              style="margin-top: 2%; margin-bottom: 2%"
+            >
+              <li style="width: 100%">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  style="height: 140%"
+                >
+                  <option selected>City of Hire</option>
+                  <option selected>From</option>
+                  <option value="1">Mumbai</option>
+                  <option value="2">Pune</option>
+                  <option value="3">Nashik</option>
+                  <option value="4">Nagpur</option>
+                  <option value="5">Thane</option>
+                  <option value="6">Sindhudurg</option>
+                  <option value="7">Satara</option>
+                  <option value="8">Ahmednagar</option>
+                </select>
+              </li>
+              <li style="width: 100%">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  style="height: 140%"
+                >
+                  <option selected>Boarding Point</option>
+                  <option selected>From</option>
+                  <option value="1">Mumbai</option>
+                  <option value="2">Pune</option>
+                  <option value="3">Nashik</option>
+                  <option value="4">Nagpur</option>
+                  <option value="5">Thane</option>
+                  <option value="6">Sindhudurg</option>
+                  <option value="7">Satara</option>
+                  <option value="8">Ahmednagar</option>
+                </select>
+              </li>
+              <li style="width: 100%">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  style="height: 140%"
+                >
+                  <option selected>Destination</option>
+                  <option selected>From</option>
+                  <option value="1">Mumbai</option>
+                  <option value="2">Pune</option>
+                  <option value="3">Nashik</option>
+                  <option value="4">Nagpur</option>
+                  <option value="5">Thane</option>
+                  <option value="6">Sindhudurg</option>
+                  <option value="7">Satara</option>
+                  <option value="8">Ahmednagar</option>
+                </select>
+              </li>
+              <li>
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="disabled-tab-pane"
+            role="tabpanel"
+            aria-labelledby="disabled-tab"
+            tabindex="0"
+          >
+            ...
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 200px">
+      <h2>We Offer</h2>
+      <h5>Features in all mahindra travel buses</h5>
+    </div>
+    <div
+      style="
+        border: 2px solid rgb(230, 12, 12);
+        margin-bottom: 10px;
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 5%;
+      "
+    >
+      <div style="display: flex; justify-content: center">
+        <div class="card" style="width: 14rem">
+          <img src="bottle.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 14rem; margin-left: 4%">
+          <img src="pillo.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 14rem; margin-left: 4%">
+          <img src="First aid.jfif" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <div class="card" style="width: 14rem">
+          <img src="snack.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 14rem; margin-left: 4%">
+          <img src="blanket.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 14rem; margin-left: 4%">
+          <img src="fire Extinguisher.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
